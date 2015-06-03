@@ -11,6 +11,6 @@ public class AuftragspositionTest {
 
     @Test
     public void testGetGesamtPreis() throws Exception {
-        assertEquals(1332, new Auftragsposition(2, new Article(new Geld(666), "Tester", false)).getGesamtPreis().getCent(),0);
+        assertEquals(1332, new Auftragsposition(2, new DefaultArticle(new Geld(666), "Tester", false)).getGesamtPreis().getCent(),0);
     }
 }

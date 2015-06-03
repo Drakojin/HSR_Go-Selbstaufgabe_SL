@@ -18,8 +18,8 @@ public class RechnungsbuilderTest {
         Empfaenger empfaenger = new Empfaenger("Hugo", "Dort");
         testbuilder.setRechnungsKopf(kopfFactory.createKopf(empfaenger));
 
-        testbuilder.addAuftragsposition(new Auftragsposition(2, new Article(new Geld(666), "Tester1", false)));
-        testbuilder.addAuftragsposition(new Auftragsposition(1, new Article(new Geld(68), "Tester2", true)));
+        testbuilder.addAuftragsposition(new Auftragsposition(2, new DefaultArticle(new Geld(666), "Tester1", false)));
+        testbuilder.addAuftragsposition(new Auftragsposition(1, new DefaultArticle(new Geld(68), "Tester2", true)));
 
         {
             testbuilder.setSteuer(new StandardTaxStrategy(0.19));

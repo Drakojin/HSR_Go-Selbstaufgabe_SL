@@ -29,7 +29,7 @@ public class Rechnungsprinter implements HatPreisVisitor {
     }
 
     public void visit(Auftragsposition auftragsposition) {
-        System.out.println( indent() + auftragsposition.getMenge() + " " + auftragsposition.getArtikel().getBeschreibung() + " à " + auftragsposition.getArtikel().getWert().format() );
+        System.out.println( indent() + auftragsposition.getMenge() + " " + auftragsposition.getArtikel().getBeschreibung() + " à " + auftragsposition.getArtikel().getPreis().format() );
     }
 
     public void visit(Article article) {
