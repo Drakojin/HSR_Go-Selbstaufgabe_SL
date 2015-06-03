@@ -18,6 +18,12 @@ public class JournalTest {
 
         StandardKopfFactary headerFactory = new StandardKopfFactary();
 
+        journal.addListener(new JournalListener() {
+            public void childAdded(Journal source, HatPreis child) {
+                System.out.println("--> added child " + child + " to " + source);
+            }
+        });
+
         journal.addChild( new Rechnungsbuilder()
                 .setRechnungsKopf( headerFactory.createKopf( new Empfaenger( "Markus Mustermann", "Dofstraﬂe 7" ) ) )
                 .setSteuer(new StandardTaxStrategy(0.19))

@@ -28,4 +28,8 @@ public class Addressbuch {
     public int getSize(){
         return abuch.size();
     }
+
+    public boolean enthaelt(Empfaenger e){
+        return abuch.containsValue(e);
+    }
 }
