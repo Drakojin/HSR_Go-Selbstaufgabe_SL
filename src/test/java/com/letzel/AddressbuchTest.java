@@ -23,6 +23,7 @@ public class AddressbuchTest {
 
     }
 
+    @Test
     public void testCommands() throws Exception {
         Addressbuch abook = new Addressbuch();
         CommandManager manager = new CommandManager();

@@ -16,7 +16,7 @@ public class SecondhandArticleTest {
         assertThat( article.getPreis().asDouble() ).isEqualTo( 6.66 );
 
 
-        Article secondHandArticle = new SecondHandArticle(0.19, article);
+        Article secondHandArticle = new SecondhandArticle(0.19, article);
         assertThat(secondHandArticle.getBeschreibung() ).isEqualTo( "Tester (gebraucht)" );
         assertThat( secondHandArticle.getPreis().asDouble() ).isEqualTo( 6.66 * 0.81, Delta.delta( 0.005 ) );
     }
